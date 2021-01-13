@@ -1,29 +1,57 @@
 <template>
-  <form class="form-signin">
+  <form class="form-signin" @submit.prevent="submit">
     <h1 class="h3 mb-3 font-weight-normal">Please register</h1>
 
     <label for="first_name">First Name</label>
-    <input type="text" id="first_name" class="form-control" placeholder="First Name" required>
+    <input type="text" id="first_name" class="form-control" placeholder="First Name" required v-model="firstName">
 
     <label for="last_name">Last Name</label>
-    <input type="text" id="last_name" class="form-control" placeholder="Last Name" required>
+    <input type="text" id="last_name" class="form-control" placeholder="Last Name" required v-model="lastName">
 
     <label for="inputEmail">Email Address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email Address" required>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email Address" required v-model="email">
 
     <label for="inputPassword">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required v-model="password">
 
     <label for="passwordConfirm">Password Confirm</label>
-    <input type="password" id="passwordConfirm" class="form-control" placeholder="Password Confirm" required>
+    <input type="password" id="passwordConfirm" class="form-control" placeholder="Password Confirm" required v-model="passwordConfirm">
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
   </form>
 </template>
 
 <script>
+  import {ref} from 'vue'
+
   export default {
-    name: "Register"
+    name: "Register",
+    setup() {
+      const firstName = ref('')
+      const lastName = ref('')
+      const email = ref('')
+      const password = ref('')
+      const passwordConfirm = ref('')
+
+      const submit = () => {
+        console.log({
+          first_name: firstName.value,
+          last_name: lastName.value,
+          email: email.value,
+          password: password.value,
+          password_confirm: passwordConfirm.value
+        })
+      }
+
+      return {
+        firstName,
+        lastName,
+        email,
+        password,
+        passwordConfirm,
+        submit
+      }
+    }
   }
 </script>
 
