@@ -1,5 +1,5 @@
 <template>
-  <Nav/>
+  <Nav :user="user"/>
   <div class="container-fluid">
     <div class="row">
       <Menu/>
@@ -14,7 +14,7 @@
   import Nav from "@/components/Nav";
   import Menu from "@/components/Menu";
   import axios from 'axios';
-  import {onMounted} from 'vue';
+  import {onMounted, ref} from 'vue';
   import {useRouter} from "vue-router";
 
   export default {
@@ -25,15 +25,20 @@
     },
     setup() {
       const router = useRouter()
+      const user = ref(null)
 
       onMounted(async () => {
         try {
           const response = await axios.get('user')
-          console.log(response)
+          user.value = response.data.data
         } catch (e) {
           await router.push('/login')
         }
       });
+
+      return {
+        user
+      }
     }
   }
 </script>
