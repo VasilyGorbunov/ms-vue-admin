@@ -15,15 +15,19 @@ const routes: Array<RouteRecordRaw> = [
     component: Login
   },
   {
-    path: '/',
+    path: '',
     component: Secure,
     children: [
       {
         path: '',
+        redirect: '/dashboard'
+      },
+      {
+        path: '/dashboard',
         component: Dashboard
       },
       {
-        path: 'users',
+        path: '/users',
         component: Users
       }
     ]
