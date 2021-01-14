@@ -11,8 +11,8 @@
 </template>
 
 <script>
-  import Nav from "@/components/Nav";
-  import Menu from "@/components/Menu";
+  import Nav from "@/secure/components/Nav";
+  import Menu from "@/secure/components/Menu";
   import axios from 'axios';
   import {onMounted, ref} from 'vue';
   import {useRouter} from "vue-router";

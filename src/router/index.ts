@@ -3,6 +3,7 @@ import Register from '@/public/Register.vue'
 import Login from '@/public/Login.vue'
 import Secure from '@/secure/Secure.vue'
 import Dashboard from '@/secure/dashboard/Dasboard.vue'
+import Users from '@/secure/users/Users.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -20,6 +21,10 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '',
         component: Dashboard
+      },
+      {
+        path: 'users',
+        component: Users
       }
     ]
   }
