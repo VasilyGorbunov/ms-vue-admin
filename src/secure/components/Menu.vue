@@ -8,6 +8,9 @@
         <li class="nav-item">
           <router-link active-class="active" class="nav-link" to="/users">Users</router-link>
         </li>
+        <li class="nav-item">
+          <router-link active-class="active" class="nav-link" to="/roles">Roles</router-link>
+        </li>
       </ul>
     </div>
   </nav>

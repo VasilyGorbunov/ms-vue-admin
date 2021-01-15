@@ -1,3 +1,4 @@
+import { Role } from './../classes/role';
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Register from '@/public/Register.vue'
 import Login from '@/public/Login.vue'
@@ -6,6 +7,7 @@ import Dashboard from '@/secure/dashboard/Dasboard.vue'
 import Users from '@/secure/users/Users.vue'
 import UsersCreate from '@/secure/users/UsersCreate.vue'
 import UsersEdit from '@/secure/users/UsersEdit.vue'
+import Roles from '@/secure/roles/Roles.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -39,6 +41,10 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/users/:id/edit',
         component: UsersEdit
+      },
+      {
+        path: '/roles',
+        component: Roles
       }
     ]
   }
