@@ -4,6 +4,7 @@ import Login from '@/public/Login.vue'
 import Secure from '@/secure/Secure.vue'
 import Dashboard from '@/secure/dashboard/Dasboard.vue'
 import Users from '@/secure/users/Users.vue'
+import UsersCreate from '@/secure/users/UsersCreate.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -29,6 +30,10 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/users',
         component: Users
+      },
+      {
+        path: '/users/create',
+        component: UsersCreate
       }
     ]
   }
