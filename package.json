@@ -7,8 +7,10 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@types/c3": "^0.7.5",
     "axios": "^0.21.1",
-    "core-js": "^3.6.5",
+    "c3": "^0.7.20",
+    "core-js": "^3.8.3",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
