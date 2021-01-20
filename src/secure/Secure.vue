@@ -33,7 +33,7 @@
       onMounted(async () => {
         try {
           const response = await axios.get('user')
-          await store.dispatch('setUser', response.data.data)
+          await store.dispatch('User/setUser', response.data.data)
           user.value = response.data.data
         } catch (e) {
           await router.push('/login')
