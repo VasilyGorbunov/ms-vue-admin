@@ -14,6 +14,9 @@
         <li class="nav-item">
           <router-link active-class="active" class="nav-link" to="/products">Products</router-link>
         </li>
+        <li class="nav-item">
+          <router-link active-class="active" class="nav-link" to="/orders">Orders</router-link>
+        </li>
       </ul>
     </div>
   </nav>
