@@ -1,5 +1,5 @@
 <template>
-  <Nav :user="user"/>
+  <Nav/>
   <div class="container-fluid">
     <div class="row">
       <Menu/>

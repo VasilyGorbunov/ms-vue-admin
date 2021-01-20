@@ -57,11 +57,13 @@ export default {
         })
 
         const submitInfo = async () => {
-            await axios.put('users/info', {
+            const response = await axios.put('users/info', {
                 first_name: firstName.value,
                 last_name: lastName.value,
                 email: email.value
             })
+
+            await store.dispatch('setUser', response.data)
         }
 
         const submitPassword = async () => {
