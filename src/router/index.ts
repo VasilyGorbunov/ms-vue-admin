@@ -14,6 +14,7 @@ import Products from '@/secure/products/Products.vue'
 import ProductsCreate from '@/secure/products/ProductsCreate.vue'
 import ProductsEdit from '@/secure/products/ProductsEdit.vue'
 import Orders from '@/secure/orders/Orders.vue'
+import OrderItems from '@/secure/orders/OrderItems.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -75,6 +76,10 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/orders',
         component: Orders
+      },
+      {
+        path: '/orders/:id',
+        component: OrderItems
       },
     ]
   }

@@ -23,7 +23,7 @@
           <td>{{ order.total }}</td>
         <td>
             <div class="btn-group mr-2">
-                <router-link :to="`/orders/${order.id}/edit`" class="btn btn-sm btn-outline-secondary">View</router-link>
+                <router-link :to="`/orders/${order.id}`" class="btn btn-sm btn-outline-secondary">View</router-link>
             </div>
         </td>
       </tr>
