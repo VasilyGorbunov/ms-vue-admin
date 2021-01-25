@@ -3,7 +3,7 @@ import { User } from './../classes/user';
 export default {
     namespaced: true,
     state: {
-        user: null
+        user: new User()
     },
     mutations: {
         SET_USER: (state: {user: User}, user: User) => state.user = user

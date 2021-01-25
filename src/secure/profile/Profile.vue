@@ -63,7 +63,16 @@ export default {
                 email: email.value
             })
 
-            await store.dispatch('User/setUser', response.data)
+            const u: User = response.data
+
+            await store.dispatch('User/setUser', new User(
+                u.id,
+                u.first_name,
+                u.last_name,
+                u.email,
+                u.role,
+                u.permissions
+            ))
         }
 
         const submitPassword = async () => {
