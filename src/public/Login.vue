@@ -27,13 +27,13 @@
       const router = useRouter()
 
       const submit = async () => {
-        const response = await axios.post('login', {
+        await axios.post('login', {
           email: email.value,
           password: password.value
         })
 
-        localStorage.setItem('token', response.data.token)
-        axios.defaults.headers['Authorization'] = `Bearer ${response.data.token}`
+        // localStorage.setItem('token', response.data.token)
+        // axios.defaults.headers['Authorization'] = `Bearer ${response.data.token}`
         await router.push('/')
       }
 

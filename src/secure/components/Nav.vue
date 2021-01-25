@@ -12,6 +12,7 @@
 import { computed } from 'vue';
   import {useRouter} from "vue-router";
 import { useStore } from 'vuex';
+import axios from 'axios';
 
   export default {
     name: "Nav",
@@ -21,8 +22,9 @@ import { useStore } from 'vuex';
 
       const user = computed(() => store.state.User.user)
 
-      const logout = () => {
-        localStorage.clear()
+      const logout = async () => {
+        //localStorage.clear()
+        await axios.post('logout', {})
         router.push('/login')
       }
 
